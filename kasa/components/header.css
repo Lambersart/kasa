@@ -1,0 +1,14 @@
+header {
+    display:flex;
+   
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px
+}
+header nav {
+    display:flex;
+    margin-left:60%;
+    margin-top: 23px;
+}
