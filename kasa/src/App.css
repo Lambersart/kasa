@@ -1,8 +1,13 @@
+@charset "UTF-8";
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+body h1 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .logo {
@@ -11,17 +16,28 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.accordion {
+  width: 80%;
+  margin: 20px auto;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.accordion-header {
+  background-color: #e76363;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 5px;
 }
-.chezVous {
-  margin-top: 35px;
-}
-footer img {
-  width:1280px;
+
+.accordion-content {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 5px;
+  border-top: 1px solid #ddd;
 }
 
 @keyframes logo-spin {
@@ -32,20 +48,52 @@ footer img {
     transform: rotate(360deg);
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
 }
-h1 {
-  color:blue;
+
+/* Style du titre */
+.title-container h1 {
+  font-size: 48px; /* Ajustée selon Figma */
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
+
+.chezVous {
+  color: white;
+  padding: 70px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f6f6f6;
+}
+
+.card img {
+  width: 340px;
+  height: 340px;
+  margin: 25px;
+}
+
+.card-title {
+  width: 340px;
+}
+
+/* 🔹 Responsive Design (Mobile) */
+@media (max-width: 768px) {
+  .title-container {
+    height: 300px; /* Réduit la hauteur sur petits écrans */
+  }
+  .title-container h1 {
+    font-size: 32px; /* Réduit la taille du texte */
+    padding: 10px;
+  }
+}/*# sourceMappingURL=App.css.map */

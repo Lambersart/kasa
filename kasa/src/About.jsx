@@ -1,40 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from '/components/Header.jsx'
+import "./App.css";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Accordion from "./components/Accordion.jsx";
+import imgAbout from "/backgroundApropos.png";
 
 function About() {
-  const [count, setCount] = useState(0)
+      return (
+            <>
+                  <div>
+                        <Header />
+                  </div>
+                  <img src={imgAbout}></img>
 
-  return (
-    <>
-   <div><Header /></div>
-    <h1>About Kasa</h1>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>A propos</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+                  <Accordion
+                        title="Fiabilité"
+                        content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
+                  />
+                  <Accordion
+                        title="Respect"
+                        content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+                  />
+                  <Accordion
+                        title="Service"
+                        content="La qualité du service est au cœur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance."
+                  />
+                  <Accordion
+                        title="Sécurité"
+                        content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
+                  />
+                  <div>
+                        <Footer title={"à propos"} />
+                  </div>
+            </>
+      );
 }
 
-export default About
-
-
+export default About;
