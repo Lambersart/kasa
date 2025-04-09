@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import "./index.css";
 import App from "./App.jsx";
 import About from "./About.jsx";
-
+import Detail from "./Detail.jsx";
 import Error from "./components/Error/Error.jsx";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
@@ -15,6 +15,8 @@ ReactDOM.createRoot(root).render(
             <Routes>
                   <Route path="/" element={<App />} />
                   <Route path="about" element={<About />} />
+
+                  <Route path="/logement/:id" element={<Detail />} />
                   <Route path="*" element={<Error />} />
             </Routes>
       </BrowserRouter>

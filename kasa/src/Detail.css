@@ -1,0 +1,77 @@
+.detail-container h1 {
+      color: #ff6060;
+}
+.detail-gallery {
+      text-align: center;
+}
+
+.image-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 800px;
+}
+
+.detail-picture {
+      width: 100%;
+      max-height: 400px;
+      min-height: 415px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+}
+.nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      z-index: 2;
+      outline: none; /* retire le carré gris au clic */
+}
+.nav-button:focus {
+      outline: none;
+      box-shadow: none;
+}
+
+.nav-button.left {
+      left: 15px;
+}
+
+.nav-button.right {
+      right: 15px;
+}
+
+.counter {
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      z-index: 1;
+}
+.nav-button svg {
+      width: 47px;
+      height: 80px;
+      color: #ffffff;
+      transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+      opacity: 1;
+}
+/* Hover : légère transparence et petit zoom */
+.nav-button:hover svg {
+      color: #d3d3d3;
+      transform: scale(1.05);
+      opacity: 1;
+}
+
+/* Active (clic) : petit "shrink" pour un effet clic */
+.nav-button:active svg {
+      transform: scale(0.95);
+      color: #b0b0b0;
+      opacity: 0.9;
+}

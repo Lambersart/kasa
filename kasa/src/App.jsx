@@ -13,10 +13,11 @@ function App() {
 
       return (
             <>
+                  <Header />
                   <div>
-                        <Header />
+                        <NavLink to="/logement/c67ab8a7">Details</NavLink>
                   </div>
-                  <div className="title-container"></div>
+
                   <div
                         style={{
                               backgroundImage: `url(${BackgroundImage})`,
